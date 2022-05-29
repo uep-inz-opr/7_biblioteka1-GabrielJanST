@@ -26,7 +26,7 @@ class Biblioteka:
         temp = input()
         if not ksiazki:
             ksiazki.append(Ksiazka(temp[0], temp[1]))
-        else
+        else:
             jestBiblioteka = jest(ksiazka, temp[0], temp[1])
             if jestBiblioteka is False:
                 ksiazka.append(Ksiazka(temp[0], temp[1]))
