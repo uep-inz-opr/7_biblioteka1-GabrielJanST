@@ -15,12 +15,12 @@ def sortowanie(Ksiazka):
 def sprawdzenie(ksiazki, tytul, autor):
     for i in range (len(ksiazki)):
         ksiazka = ksiazki[i]
-        if tytul == ksiazka.ksiazki and autor == autor:
+        if tytul == ksiazka.tytul and autor == ksiazka.autor:
             return True
     return False
 
 ksiazki = []
-ksiazka = []
+egzemplarz = []
 
 w = input()
 for i in range(0, int(w)):
@@ -37,9 +37,9 @@ for i in range(0, int(w)):
 for j in range(len(ksiazki)):
     licz = 0
     temp = ksiazki[j]
-    for i in range(len(ksiazka)):
-        ks = ksiazka[j]
+    for i in range(len(egzemplarz)):
+        ks = egzemplarz[j]
         if temp.tytul == ks.tytul and temp.autor == ks.autor:
             licz = licz + 1
     licz = str(licz)
-    print("('"+temp.tytul+"',","'"+temp.autor+"', '"+temp.ksiazka+"',",licz+")")
+    print("('"+temp.tytul+"',","'"+temp.autor+"',",licz+")")
