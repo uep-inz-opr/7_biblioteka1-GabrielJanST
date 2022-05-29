@@ -10,7 +10,7 @@ class Egzemplarz:
 def sortowanie(Ksiazka):
     return Ksiazka.tytul
 
-def sprawdzenie(ksiazka, tytul, autor):
+def sprawdzenie(ksiazki, tytul, autor):
     for i in range (len(ksiazki)):
         ksiazka = ksiazki[i]
         if tytul == ksiazka.ksiazki and autor == autor:
@@ -23,11 +23,12 @@ class Biblioteka:
 
     w = input()
     for i in range(0, int(w)):
-        temp = input()
+        k = 0
+        temp = eval(input())
         if not ksiazki:
             ksiazki.append(Ksiazka(temp[0], temp[1]))
         else:
-            jestBiblioteka = jest(ksiazka, temp[0], temp[1])
+            jestBiblioteka = sprawdzenie(ksiazka, temp[0], temp[1])
             if jestBiblioteka is False:
                 ksiazka.append(Ksiazka(temp[0], temp[1]))
     ksiazki.sort(key=sortowanie)
