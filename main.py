@@ -8,7 +8,7 @@ class Egzemplarz:
         self.autor = autor
         self.rok = rok
 def sortowanie(Ksiazka):
-    return.Ksiazka.tytul
+    return Ksiazka.tytul
 
 def sprawdzenie(ksiazka, tytul, autor):
     for i in range (len(ksiazki)):
@@ -31,3 +31,13 @@ class Biblioteka:
             if jestBiblioteka is False:
                 ksiazka.append(Ksiazka(temp[0], temp[1]))
     ksiazki.sort(key=sortowanie)
+
+    for j in range(len(ksiazki)):
+        licz = 0
+        temp = ksiazki[j]
+        for i in range(len(ksiazka)):
+            ks = ksiazka[j]
+            if temp.tytul == ks.tytul and temp.autor == ks.autor:
+                licz = licz + 1
+        licz = str(licz)
+        print("('"+temp.tytul+"',","'"+temp.autor+"', '"+temp.ksiazka+"',",licz+")")
